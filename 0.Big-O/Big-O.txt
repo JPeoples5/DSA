@@ -1,0 +1,88 @@
+Big O Notation: is a way to formalize counting. Big O is worst Case scenario.
+
+Counting operations is too manual, need something broader and more general
+
+================================================
+1.Constant - O(1)
+
+EXAMPLE:
+function addUpTo(n){
+	return n * (n+1) / 2
+}
+
+  t|
+  i|
+  m|______________________
+  e|_________________________
+        input size
+
+================================================
+2.Linear - O(n)
+
+EXAMPLE:
+function logAll(arr){
+  for(var i =0; i< arr.length; i++){
+    console.log(arr[i]);
+  }
+}
+
+  t|    /
+  i|   /
+  m|  /
+  e| /
+   |/_______________
+         input size
+
+
+================================================
+2.5 O(nlogn) ?
+
+================================================
+3.Logarithmic runtime | Quadratic - O(n^2)
+
+EXAMPLE:
+function logDbl(arr){
+  for(var i =0; i<arr.length; i++){
+    for(var j =0; j<arr.length; j++){
+      console.log(arr[i]+arr[j]);
+    }
+  }
+}
+
+
+  t|       |
+  i|       |
+  m|      /
+  e|    /
+   |__/________
+	input size
+================================================
+
+
+
+Simplifying
+- Constants don’t matter!
+- O(2n) —> O(n)   
+- O(500) —> O(1)
+- O(n^2 + 5n +8) —> O(n^2)
+
+Big O Shorthands (usually not always true):
+1. Arithmetic ops are constant 
+2. Variable assignments are constant
+3. Accessing elements in an arr by index or Obj by key is const
+4. In a loop the complexity is the length of the loop times the complexity of whatever happens inside the loop.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

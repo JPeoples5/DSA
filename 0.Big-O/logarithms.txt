@@ -1,0 +1,6 @@
+Log2(8) = 3          ————> 2^3 = 8
+Log2(Val) = exponent -———> 2^exponent = val
+
+Log ===log2
+
+We’ll omit the base because at scale it doesn’t really matter.
