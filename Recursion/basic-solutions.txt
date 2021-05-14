@@ -9,8 +9,8 @@ function power(base, exponent){
 
 function power(base, exp){
 	let result = 1
-	for(let I = 1; I <= num; I++){
-		result *=i
+	for(let i = 1; i <= exp; i++){
+		result *= base
 	}
 	return result
 }
