@@ -1,0 +1,23 @@
+  Recursion
+=================
+1. Define recursion
+- A process or function that calls itself.
+
+2. Two essential components of recursion
+A. Different Input (The Call)
+B. Base Case: Where recursion ends 
+
+3. Visualize call stack
+ -When a function is invoked it is pushed on top of the call stack
+- When JS sees `return` || when the function ends the compiler removes top item(pop).
+
+4. Helper methods within 
+-Keep pushing functions onto the call stack over and over
+-
+
+
+Common mistakes
+=============
+1. No base case
+2. Returning the wrong thing 
+ “Max call stack exceeded” ==> stackoverflow

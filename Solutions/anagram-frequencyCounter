@@ -1,0 +1,25 @@
+var peopleObj = {"dokStaff" : [
+  {
+  name : "gregg",
+  hobby : "movie",
+  alive : true
+},
+    {
+  name : "Jeremiah",
+  hobby : "dancing",
+  alive : true
+},
+    {
+  name : "Phil",
+  hobby : "movie",
+  alive : true
+}
+                ]}
+
+function killAllMovieWatchers(){
+  //loop through people object
+  for(var i  = 0; i < peopleObj.length; i++)
+  console.log("I should be logging 3 times...")
+}
+
+killAllMovieWatchers()

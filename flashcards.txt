@@ -1,0 +1,3 @@
+slice(b,a) - slice Before and After. You’ll get a shallow copy of the arr of what’s between b——a. If just ‘b’ return a copy of everything after ‘b’
+
+splice
