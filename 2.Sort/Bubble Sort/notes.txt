@@ -1,0 +1,32 @@
+
+goal: check n with n+1 and move the largest number to the right 
+many sorting algos involce some type of swapping 
+
+function swap(arr, indx1, indx2){
+	let temp = arr[indx1];
+	arr[indx1] = arr[indx2];
+	arr[indx2] = temp;
+}
+
+
+let arr = [-2, 444, 0, 55]
+    //final [-2 , 0, 55, 444]
+function bubbleSort(arr){
+  for(let i = arr.length; i > 0; i--){
+    for(let j = 0; j < i - 1; j++){
+      console.log(arr, arr[j], arr[j+1])
+      //swap
+      if(arr[j] > arr[j + 1]){
+        console.log("swap")
+       // [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
+        var temp = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = temp
+      }
+    }
+    console.log("break")
+  }
+  return arr
+}
+
+bubbleSort(arr)

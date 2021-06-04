@@ -1,0 +1,9 @@
+function ls(arr, n){
+	arr.map(i => {
+		if( I === n){
+			return n
+		}else{
+			return -1
+		}
+	})
+}

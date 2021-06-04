@@ -1,0 +1,2 @@
+Sorted vs unsorted matters.
+If unsorted, checking by linear search is a ‘good’ method.
