@@ -9,8 +9,7 @@ function swap(arr, indx1, indx2){
 }
 
 
-let arr = [-2, 444, 0, 55]
-    //final [-2 , 0, 55, 444]
+
 function bubbleSort(arr){
   for(let i = arr.length; i > 0; i--){
     for(let j = 0; j < i - 1; j++){
@@ -30,3 +29,36 @@ function bubbleSort(arr){
 }
 
 bubbleSort(arr)
+
+
+
+####
+
+function bubbleSort(array) {
+  for (let i = 0; i < array.length; i++) {
+	// the last item will always be sorted so no need to loop thru it
+    for (let j = 0; j < array.length - 1 - i; j++) {
+      if (array[j] > array[j + 1])
+        [array[j], array[j + 1]] = [array[j + 1], array[j]]; 
+    }
+  }
+  return array;
+}
+
+
+// save amount of iterations for a nearly sorted arr
+function bubbleSort(array) {
+  var noSwaps;
+  for (let i = 0; i < array.length; i++) {
+	// the last item will always be sorted so no need to         loop thru it
+    for (let j = 0; j < array.length - 1 - i; j++) {
+      if (array[j] > array[j + 1]){
+        [array[j], array[j + 1]] = [array[j + 1], array[j]]; 
+        console.log("loops")
+        noSwaps = false
+    }
+    }
+    if(noSwaps){break}
+  }
+  return array;
+}
