@@ -1,0 +1,8 @@
+Bubble sort 
+Insertion sort
+Selection sort
+
+Avg time complexity = O(n^2)
+Avg space complexity = O(1
+
+These are the quadratic sorts…`

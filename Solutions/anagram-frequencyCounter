@@ -1,68 +1,17 @@
-//binary search
-//bubble sort/
-//selection sort/
-
-
-// let arr = [2, 33, 56,77,454, 494, 999]
-
-
-let randArr = [0,999,43,500,22]
-
-
-
-              
-              // [0, 22, 43, 500, 999]
-
-// sort numbers from smallest to greatest
-function bubbleSort(arr){
-  for(let i = 0 ; i <  arr.length; i++){
- for(let j = 0; j < arr.length - 1 - i; j++){
-
-      console.log(arr)
-      if(arr[j] > arr[j+1]){
-      console.log("swap")
-        [arr[j], arr[j+1]] = [arr[j +1], arr[j]]
+function m(arr1, arr2){
+  let results = []
+  
+  for(let i =0; i< arr1.length; i++){
+    for(let j = 0; j<arr2.length; j++){
+      if(arr1[i] < arr2[i]){
+        results.push(arr1[i])
+      }else{
+        results.push(arr2[j])
       }
     }
   }
-  return arr;
+    
+  return results
 }
 
-bubbleSort(randArr)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // find index of what is passed in without looping through the whole list 
-// function bSearch(arr, tgt){
-//   let leftIndex = 0;
-//   let rightIndex = arr.length -1;
-//   let middleIndex = Math.floor((leftIndex + rightIndex)/2);
-                                      
-//   while (arr[middleIndex] !== tgt && leftIndex <= rightIndex){
-//     if(tgt < arr[middleIndex]){
-//       rightIndex = middleIndex -1;
-//     }
-//     if (tgt > arr[middleIndex]){
-//       leftIndex = middleIndex + 1;
-//     }
-//     middleIndex = Math.floor((leftIndex + rightIndex)/2);
-//   }
-//     return arr[middleIndex] === tgt ? middleIndex : -1;
-// }
-
-// bSearch(arr, 2)
+m([1,10,50], [2,14,99,100])
