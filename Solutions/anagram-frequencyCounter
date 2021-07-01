@@ -1,33 +1,68 @@
-let arr1 = ["there", "hello"]
-let arr2 = ["there","xxxx"]
-//
-function compy(arr1,arr2){
-  let compareObj = {}
-  let diff = [];
+//binary search
+//bubble sort/
+//selection sort/
 
-  for(let i = 0; i < arr1.length ; i++){
-    if(!compareObj[arr1[i]]){
-      compareObj[arr1[i]] = 1
-    }else{
-      compareObj[arr1[i]]++
+
+// let arr = [2, 33, 56,77,454, 494, 999]
+
+
+let randArr = [0,999,43,500,22]
+
+
+
+              
+              // [0, 22, 43, 500, 999]
+
+// sort numbers from smallest to greatest
+function bubbleSort(arr){
+  for(let i = 0 ; i <  arr.length; i++){
+ for(let j = 0; j < arr.length - 1 - i; j++){
+
+      console.log(arr)
+      if(arr[j] > arr[j+1]){
+      console.log("swap")
+        [arr[j], arr[j+1]] = [arr[j +1], arr[j]]
+      }
     }
-    // console.log("first loop", compareObj)
   }
-
-  // for(indx of arr2){
-  //   if(compareObj[indx]){
-  //     compareObj[indx]--
-  //   }
-  // }
-  console.log(compareObj)
-  
-  //     for(key in compareObj){
-  //   if(compareObj[key] <= 0){
-  //       diff.push(key)
-  //     }
-  // }
-  return diff
+  return arr;
 }
 
-compy(arr1,arr2)
+bubbleSort(randArr)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // find index of what is passed in without looping through the whole list 
+// function bSearch(arr, tgt){
+//   let leftIndex = 0;
+//   let rightIndex = arr.length -1;
+//   let middleIndex = Math.floor((leftIndex + rightIndex)/2);
+                                      
+//   while (arr[middleIndex] !== tgt && leftIndex <= rightIndex){
+//     if(tgt < arr[middleIndex]){
+//       rightIndex = middleIndex -1;
+//     }
+//     if (tgt > arr[middleIndex]){
+//       leftIndex = middleIndex + 1;
+//     }
+//     middleIndex = Math.floor((leftIndex + rightIndex)/2);
+//   }
+//     return arr[middleIndex] === tgt ? middleIndex : -1;
+// }
+
+// bSearch(arr, 2)

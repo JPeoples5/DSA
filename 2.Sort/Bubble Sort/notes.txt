@@ -1,3 +1,5 @@
+https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/11071950#questions
+
 
 goal: check n with n+1 and move the largest number to the right 
 many sorting algos involce some type of swapping 
