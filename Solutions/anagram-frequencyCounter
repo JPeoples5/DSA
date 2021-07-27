@@ -1,17 +1,33 @@
-function m(arr1, arr2){
-  let results = []
+let arr1 =  [0,4,8,12]
+let arr2 = [1,33,77,99]
+
+function merge(arr1, arr2){
+let results = [];
+let i = 0;
+let j = 0;
   
-  for(let i =0; i< arr1.length; i++){
-    for(let j = 0; j<arr2.length; j++){
-      if(arr1[i] < arr2[i]){
-        results.push(arr1[i])
-      }else{
-        results.push(arr2[j])
-      }
+  while(i < arr1.length && j < arr2.length){
+    if(arr1[i] < arr2[j]){
+      results.push(arr1[i])
+      i++
+    }else{
+      results.push(arr2[j])
+      j++
     }
   }
     
+    while(i < arr1.length){
+        results.push(arr1[i])
+        i++
+    }
+    
+    
+    while(j < arr2.length){
+      // why dont we need the if check 
+        results.push(arr2[j])
+        j++
+  } 
   return results
 }
 
-m([1,10,50], [2,14,99,100])
+merge(arr1,arr2)
