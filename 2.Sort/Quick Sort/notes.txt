@@ -1,0 +1,8 @@
+Quick sort.
+- Based on arrays on 0 || 1 element are already sorted
+- Select one element (pivot), find the index where the pivot should end up in a sorted arr
+-  once the pivot is properly positioned, quick sort can be applied to either side of the pivot
+
+
+
+
