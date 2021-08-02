@@ -29,7 +29,6 @@ function merge(arr1, arr2){
 	  }
 	}
 
-	//In the case that arr1.length || j < arr2.length is true ...not and
 	while(i < arr1.length){
 		results.push(arr1[i]);
 		i++;
