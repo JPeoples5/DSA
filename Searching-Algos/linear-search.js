@@ -1,6 +1,6 @@
 function ls(arr, n){
 	arr.map(i => {
-		if( I === n){
+		if( i === n){
 			return n
 		}else{
 			return -1

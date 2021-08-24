@@ -1,8 +1,8 @@
 
-https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/8344154#questions
+// https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/8344154#questions
 
 
-Selection sort is worse than bubble sort.
+// Selection sort is worse than bubble sort.
 
 //Incorrect version as I create a new array
 function selectionSort(array) {
@@ -10,8 +10,8 @@ function selectionSort(array) {
 
   let smallArr = []
   for(let i = array.length - 1 ; i >= 0; i--){
-    let smallest = Math.min(...array)
-    smallArr.push(smallest)
+    let smallest = Math.min(...array);
+    smallArr.push(smallest);
     array.splice(smallest,1)
   }
   return smallArr;
@@ -35,7 +35,7 @@ const selectionSort = (arr) =>{
     }
   }
   
-  return arr
+  return arr;
 }
 
-selectionSort(arr)
+selectionSort(arr);

@@ -1,5 +1,5 @@
-Time complexity: O(n loh n)
-Space: O(n)
+// Time complexity: O(n loh n)
+// Space: O(n)
 
 function merge(arr1, arr2){
 	let results = [];

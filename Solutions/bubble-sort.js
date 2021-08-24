@@ -1,8 +1,8 @@
-https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/11071950#questions
+//https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/11071950#questions
 
 
-goal: check n with n+1 and move the largest number to the right 
-many sorting algos involce some type of swapping 
+//goal: check n with n+1 and move the largest number to the right 
+//many sorting algos involce some type of swapping 
 
 function swap(arr, indx1, indx2){
 	let temp = arr[indx1];
@@ -33,8 +33,7 @@ function bubbleSort(arr){
 bubbleSort(arr)
 
 
-
-####
+// new approach
 
 function bubbleSort(array) {
   for (let i = 0; i < array.length; i++) {

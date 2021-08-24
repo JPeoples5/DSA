@@ -1,4 +1,4 @@
-POWER SOLUTION
+//POWER SOLUTION
 
 function power(base, exponent){
     if(exponent === 0) return 1
@@ -18,7 +18,7 @@ function power(base, exp){
 //////////////////////////////////////
 
 
-FACTORIAL SOLUTION
+//FACTORIAL SOLUTION
 function factorial(x){
    if (x < 0 ) return 0;
    if (x <= 1 ) return 1;
@@ -37,7 +37,7 @@ function factorial(num){
 
 //////////////////////////////////////
 
-PRODUCT OF ARRAY SOLUTION
+//PRODUCT OF ARRAY SOLUTION
 function productOfArray(arr) {
     if(arr.length === 0) {
         return 1;
@@ -46,12 +46,11 @@ function productOfArray(arr) {
 }
 
 const productOfArray = (arr) => {
-    let productSum = 1
+    let productSum = 1;
   
-    arr.map(i => productSum *= i)
+    arr.map(i => productSum *= i);
     
-    return productSum
-        
+    return productSum;
 }
 
 //////////////////////////////////////

@@ -1,5 +1,5 @@
-let arr1 =  [0,4,8,12]
-let arr2 = [1,33,77,99]
+let arr1 =  [0,4,8,12];
+let arr2 = [1,33,77,99];
 
 function merge(arr1, arr2){
 let results = [];
@@ -21,13 +21,13 @@ let j = 0;
         i++
     }
     
-    
+
     while(j < arr2.length){
       // why dont we need the if check 
-        results.push(arr2[j])
+        results.push(arr2[j]);
         j++
   } 
-  return results
+  return results;
 }
 
 merge(arr1,arr2)

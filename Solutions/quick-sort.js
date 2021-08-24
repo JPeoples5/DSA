@@ -1,14 +1,14 @@
-Quick sort.
-- Based on arrays on 0 || 1 element are already sorted
-- Select one element (pivot), find the index where the pivot should end up in a sorted arr
--  once the pivot is properly positioned, quick sort can be applied to either side of the pivot
+// Quick sort.
+// - Based on arrays on 0 || 1 element are already sorted
+// - Select one element (pivot), find the index where the pivot should end up in a sorted arr
+// -  once the pivot is properly positioned, quick sort can be applied to either side of the pivot
 
 // revisit this - You will understand the next time through
 // notoptimized the srart points are set to 0 for simplicity
 
-Avg time complexity: O(nlog n)
-worst time: O(n^2) - if pivotPt remaians the first element
-space complexity: O(logn)
+// Avg time complexity: O(nlog n)
+// worst time: O(n^2) - if pivotPt remaians the first element
+// space complexity: O(logn)
 
 quickSort([24,6,5,32,54,-88,6,8,0,]);
 

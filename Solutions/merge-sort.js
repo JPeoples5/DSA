@@ -1,4 +1,4 @@
-Merge sort takes the divide and conquer approach
+/*Merge sort takes the divide and conquer approach
 Divides into one or 0 element.length array 
 
 [5,20,10,0]
@@ -12,6 +12,8 @@ Divides into one or 0 element.length array
   N == 1st arr M == 2nd arr
  O(n + m)
  1. Do just the merge of two unsorted arrs.
+
+*/
 	
 //arr1 and arr2 are already sorted
 function merge(arr1, arr2){
@@ -39,7 +41,7 @@ function merge(arr1, arr2){
 		j++;
 	}
   
-  return results
+  return results;
 }
 
 merge([22,43,22324,999999],[0,7,88])

@@ -1,4 +1,4 @@
-##
+/* ##
 Two pointers.
 Increasing ordered arr.
 Mutate arr.
@@ -26,10 +26,8 @@ Step 2:
 [1,2,3,4,3,4,4]
              j
 
-return (i + 1) == 4 unique nums
-
-##
-
+return (i + 1) == 4
+*/
 function countUniqueValues(arr){
   if(arr.length === 0) return 0
   let i = 0
@@ -42,6 +40,6 @@ function countUniqueValues(arr){
   return (i + 1)
 }
 
+countUniqueValues([12,3,42,4,32,3,4,2,])
 
-##
-This only works if I can mutate the arr
+// This only works if I can mutate the arr

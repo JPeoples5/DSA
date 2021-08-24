@@ -1,16 +1,16 @@
--This is not a comparison algo.
-- works on a list of numbers
-- exploits the fact that info about the size of a number is encoded in the number of digits
-- (more digits means a bigger number)
+// -This is not a comparison algo.
+// - works on a list of numbers
+// - exploits the fact that info about the size of a number is encoded in the number of digits
+// - (more digits means a bigger number)
 
-[12, 349 ,54634, 242, 25]
+// [12, 349 ,54634, 242, 25]
 
-1.look at the last digit of each num in the arr
-	1a. place each of the numbers into a bucket based on their last digit [0-9]
-	1a. remove them out of the buckets and place them into the arr
-2. look at the scond to last digtit
-	2a. place each of the numbers ..... based on theit secodn to last digit
-	2a. remove them out of the buckets and place them into the arr
+// 1.look at the last digit of each num in the arr
+// 	1a. place each of the numbers into a bucket based on their last digit [0-9]
+// 	1a. remove them out of the buckets and place them into the arr
+// 2. look at the scond to last digtit
+// 	2a. place each of the numbers ..... based on theit secodn to last digit
+// 	2a. remove them out of the buckets and place them into the arr
 
 
 
