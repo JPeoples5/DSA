@@ -12,21 +12,21 @@ class Queue{
     this.length = 0;
   }
   
+  //add to the end of the line
   enqueue(val){
     var addedNode = new Node(val);
     if(this.length === 0 ){
       this.start = this.last = addedNode;
     }else{
-      var ogStart = this.start;
-      this.start = addedNode;
-      addedNode.next = ogStart;
+      this.last.next = addedNode;
+      this.last = addedNode;
     }
     this.length++;
   }
-  
+  //pop off the start
   dequeue(){
     if(!this.start) return
-
+    
     if (this.length === 1 ){
       this.start = this.last = null;
     }else{
@@ -36,12 +36,5 @@ class Queue{
     }
     this.length--;
     return dequeuedNode;
-  }
-  
+  } 
 }
-
-var q = new Queue();
-q.enqueue('A');
-q.enqueue('B');
-// q.enqueue('C')
-q
