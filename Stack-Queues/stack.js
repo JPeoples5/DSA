@@ -5,9 +5,10 @@
 /*
 Insertion - O(1)
 Removal - O(1)
-Searching - O(N)
+/*Searching - O(N)
 Access - O(N)
 */
+
 class Node{
   constructor(val){
     this.val = val;
@@ -21,9 +22,9 @@ class Stack{
     this.last = null;
     this.length = 0;
   }
-  // to the front /top of the stack
+  // to the front / top of the stack
   push(val){
-    var addedNode = new Node(val)
+    var addedNode = new Node(val);
     if(!this.first){
       this.first = this.last = addedNode;
     }else{

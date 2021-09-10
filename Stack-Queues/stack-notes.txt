@@ -2,6 +2,7 @@ Stack:
 
 A LIFO data structure
 Last In First Out
+"Stacking paper the last paper is placed on top and will be removed from the top"
 
 The last element added to the stack will be the first element removed from the stack.
 
