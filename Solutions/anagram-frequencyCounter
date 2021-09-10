@@ -12,10 +12,9 @@ class DoublyLinkedList{
       this.tail = null;
       this.length = 0;
   }
-  
+
   push(val){
     var newNode = new Node(val);
-    
     if(this.length === 0){
       this.head = newNode;
       this.tail = newNode;
@@ -26,27 +25,50 @@ class DoublyLinkedList{
     }
     this.length++
   }
-  
   pop(){
-    if(this.length === 0)return false;
-    if(this.length === 1 ) return this.head;
-    
-    var originalTail = this.tail;
-    originalTail.prev = null;
-    this.length--;
-    return originalTail;
+    if(!this.head) return;
+    var ogTail = this.tail;
+    if(this.length === 1){
+      this.head = this.tail = null;
+    }else{
+      this.tail = ogTail.prev;
+      this.tail.next = null;
+      ogTail.prev = null;
+    }
+    this.length--
+    return ogTail;
   }
-  
-  
+  shift(){
+    if(!this.head) return;
+    var ogHead = this.head;
+    if(this.length === 1){
+      this.head = this.tail = null;
+    }else{
+      this.head = ogHead.next;
+      this.head.prev = null;
+      ogHead.next = null;
+      
+    }
+    this.length--
+    return ogHead;
+  }
+  unshift(val){
+    var newNode = new Node(val)
+    if(!this.head){
+     this.head = this.tail = newNode; 
+    }else{
+      var ogHead = this.head;
+      ogHead.prev = newNode;
+      this.head = newNode;
+      newNode.next = ogHead;
+    }
+    this.length++;
+  }
 }
 
-const DLL = new DoublyLinkedList();
-DLL.push("A");
-DLL.push("B");
-DLL.push("C");
-DLL.pop();
+var DLL = new DoublyLinkedList()
+// DLL.push('A')
+// DLL.push('B')
+DLL.unshift('C')
+// DLL.shift();
 DLL
-
-var arr = [1,4,5,6];
-
-
