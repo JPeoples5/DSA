@@ -1,0 +1,18 @@
+What is a Tree: A data structure that consist of nodes in a parent / child relationship
+
+
+Root Node: Top mode node. A tree can only have one root
+
+List - linear 
+Trees - nonlinear 
+Leaf - node with no children
+Edge - The connection between nodes… displayed as arrows
+
+
+Tree Examples:
+HTML DOM
+Network Routing
+Abstract Syntax trees
+AI
+FSO - File System Object 
+JSON
