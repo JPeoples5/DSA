@@ -48,7 +48,7 @@ class BinarySearchTree {
                 found = current;
             }
         }
-        if(!found) return "penis";
+        if(!found) return undefined;
         return found;
     }
 }
