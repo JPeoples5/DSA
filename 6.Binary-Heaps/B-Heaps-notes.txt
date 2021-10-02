@@ -24,5 +24,7 @@ To find the parent of n:
 
 
 
-
-
+Removing From a Heap:
+- remove from the root
+- replace with the most recently added 
+- adjust the heap (sink down)
