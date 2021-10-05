@@ -159,6 +159,7 @@ class SinglyLinkedList{
 
   //            D -->  C -->   B  -->  A --> null  
     reverse(){
+      if(!this.head) return undefined
       //swap head and tail properties
       var current = this.head 
       this.head = this.tail // D
