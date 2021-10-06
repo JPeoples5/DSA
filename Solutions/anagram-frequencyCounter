@@ -1,74 +1,71 @@
-class Node{
-    constructor(val){
-        this.val = val;
-        this.next = null;
-        this.prev = null;
-    }
+var oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "https://dog.ceo/api/breeds/list/all");
+oReq.send();
+
+function reqListener() {
+	console.log(JSON.parse(this.response));
 }
 
-class DoublyLinkedList{
-  constructor(){
-      this.head = null;
-      this.tail = null;
-      this.length = 0;
-  }
+// class Node{
+//   constructor(val){
+//     this.val = val
+//     this.next = null
+//   }
+// }
 
-  push(val){
-    var newNode = new Node(val);
-    if(this.length === 0){
-      this.head = newNode;
-      this.tail = newNode;
-    }else{
-      this.tail.next = newNode;
-      newNode.prev = this.tail;
-      this.tail = newNode;
-    }
-    this.length++
-  }
-  pop(){
-    if(!this.head) return;
-    var ogTail = this.tail;
-    if(this.length === 1){
-      this.head = this.tail = null;
-    }else{
-      this.tail = ogTail.prev;
-      this.tail.next = null;
-      ogTail.prev = null;
-    }
-    this.length--
-    return ogTail;
-  }
-  shift(){
-    if(!this.head) return;
-    var ogHead = this.head;
-    if(this.length === 1){
-      this.head = this.tail = null;
-    }else{
-      this.head = ogHead.next;
-      this.head.prev = null;
-      ogHead.next = null;
-      
-    }
-    this.length--
-    return ogHead;
-  }
-  unshift(val){
-    var newNode = new Node(val)
-    if(!this.head){
-     this.head = this.tail = newNode; 
-    }else{
-      var ogHead = this.head;
-      ogHead.prev = newNode;
-      this.head = newNode;
-      newNode.next = ogHead;
-    }
-    this.length++;
-  }
-}
+// class SLL{
+//   constructor(){
+//     this.head = null
+//     this.tail = null
+//     this.length = 0
+//   }
+  
+//   push(val){
+//     let pushedNode = new Node(val)
+//     if(!this.head){
+//       this.head = this.tail = pushedNode
+//     }else{
+//       this.tail.next = pushedNode
+//       this.tail = pushedNode
+//     }
+  
+//     this.length++
+//   }
+  
+  
+//   /*
+//       A---> B--->C--->null
+//     null<---A<---B<---C
+//   */
+//   reverse(){
+//   if(!this.head) return undefined
+  
+//   let current = this.head
+//   this.head = this.tail
+//   this.tail = current
+    
+//   let temp = null;
+//   let prev = null
+//   for(let i = 0; i < this.length; i++){
+//    temp = current.next // B
+//    current.next = prev // null
+    
+//   prev = current // A 
+//   current = temp //
+//   }
+//     return this
+// }
+// }
 
-var DLL = new DoublyLinkedList()
-// DLL.push('A')
-// DLL.push('B')
-DLL.unshift('C')
-// DLL.shift();
-DLL
+
+// let l = new SLL();
+
+// l.push('A')
+// l.push('B')
+// l.push('C')
+
+// console.log('=============')
+// l.reverse()
+
+

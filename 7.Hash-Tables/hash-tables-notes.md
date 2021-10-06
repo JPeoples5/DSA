@@ -31,3 +31,21 @@ Hash functions are usually a one way function
 ## Prime Numbers:
 
 - using large prime numbers reduces collisions
+
+## Separate Chaining
+
+- at each index in our arr we store values using another data structure like an array or linked list
+
+- Thre is a collision at index 1 and **val1** and **val2** are store in a arr at position 1
+
+```
+  0    1    2    3
+[..., ..., ..., ...]
+     val1
+     val2
+```
+
+## Linear Probing
+
+- When we find collision we search through the table to find the next empty slot
+- alows us to store a single val at a single idx

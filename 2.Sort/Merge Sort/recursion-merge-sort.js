@@ -1,6 +1,10 @@
 // Time complexity: O(n loh n)
 // Space: O(n)
 
+fetch("http://example.com/movies.json")
+	.then((response) => response.json())
+	.then((data) => console.log(data));
+
 function merge(arr1, arr2) {
 	let results = [];
 	let i = 0;
