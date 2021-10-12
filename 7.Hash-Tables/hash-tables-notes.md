@@ -1,5 +1,9 @@
 # Hash Tables
 
+- Insertion: O(1)
+- Deletion: O(1)
+- Access: O(1)
+
 ## What is a Hash Table:
 
 - Hash tables are used to store key value pairs.
