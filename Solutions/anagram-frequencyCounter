@@ -1,71 +1,10 @@
-var oReq = new XMLHttpRequest();
-oReq.addEventListener("load", reqListener);
-oReq.open("GET", "https://dog.ceo/api/breeds/list/all");
-oReq.send();
-
-function reqListener() {
-	console.log(JSON.parse(this.response));
+function favoriteDiscord1(server = "We The Peoples"){
+  console.log(server);
 }
 
-// class Node{
-//   constructor(val){
-//     this.val = val
-//     this.next = null
-//   }
-// }
+function favoriteDiscord2(server){
+  if(server === undefined) server = "We The Peoples";
+  console.log(server);
+}
 
-// class SLL{
-//   constructor(){
-//     this.head = null
-//     this.tail = null
-//     this.length = 0
-//   }
-  
-//   push(val){
-//     let pushedNode = new Node(val)
-//     if(!this.head){
-//       this.head = this.tail = pushedNode
-//     }else{
-//       this.tail.next = pushedNode
-//       this.tail = pushedNode
-//     }
-  
-//     this.length++
-//   }
-  
-  
-//   /*
-//       A---> B--->C--->null
-//     null<---A<---B<---C
-//   */
-//   reverse(){
-//   if(!this.head) return undefined
-  
-//   let current = this.head
-//   this.head = this.tail
-//   this.tail = current
-    
-//   let temp = null;
-//   let prev = null
-//   for(let i = 0; i < this.length; i++){
-//    temp = current.next // B
-//    current.next = prev // null
-    
-//   prev = current // A 
-//   current = temp //
-//   }
-//     return this
-// }
-// }
-
-
-// let l = new SLL();
-
-// l.push('A')
-// l.push('B')
-// l.push('C')
-
-// console.log('=============')
-// l.reverse()
-
-
+favoriteDiscord2()

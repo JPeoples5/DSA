@@ -42,6 +42,8 @@ Hash functions are usually a one way function
 
 - Thre is a collision at index 1 and **val1** and **val2** are store in a arr at position 1
 
+- Our solutions uses this method
+
 ```
   0    1    2    3
 [..., ..., ..., ...]
