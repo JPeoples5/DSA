@@ -23,9 +23,15 @@ class Graph {
 
 		this.adjacencyList[v2] = this.adjacencyList[v2].filter((v) => v !== v1)
 	}
-	// Todo - last one woot woot
-	removeVertex(v) {
-		null
+
+	removeVertex(vertex) {
+		for (let key in this.adjacencyList) {
+			if (this.adjacencyList[vertex]) delete this.adjacencyList[vertex]
+
+			if (this.adjacencyList[key].includes(vertex)) {
+				this.adjacencyList[key] = this.adjacencyList[key].filter((arrItem) => arrItem !== vertex)
+			}
+		}
 	}
 }
 
@@ -36,6 +42,6 @@ g.addVertex("Jordan")
 g.addEdge("Jeremiah", "Jonah")
 g.addEdge("Jeremiah", "Jordan")
 
-g.removeEdge("Jeremiah", "Jonah")
+g.removeVertex("Jonah")
 
 console.log(g)
