@@ -33,15 +33,59 @@ class Graph {
 			}
 		}
 	}
+
+	recursiveDFS(start) {
+		const results = []
+		const visited = {}
+		// the 'this' concept changes with the second dfs func
+		const adjacencyList = this.adjacencyList
+
+		//helper func
+		function dfs(vtx) {
+			if (!vtx) return null
+
+			// obj for O(1) lookup
+			visited[vtx] = true
+			results.push(vtx)
+
+			//loop over aL's key's values
+			for (let valueItem in adjacencyList) {
+				console.log(valueItem)
+				if (!visited[valueItem]) return dfs(valueItem)
+			}
+		}
+		dfs(start)
+		return results
+	}
 }
 
 let g = new Graph()
-g.addVertex("Jeremiah")
-g.addVertex("Jonah")
-g.addVertex("Jordan")
-g.addEdge("Jeremiah", "Jonah")
-g.addEdge("Jeremiah", "Jordan")
 
-g.removeVertex("Jonah")
+g.addVertex("A")
+g.addVertex("B")
+g.addVertex("C")
+g.addVertex("D")
+g.addVertex("E")
+g.addVertex("F")
+
+g.addEdge("A", "B")
+g.addEdge("A", "C")
+g.addEdge("B", "D")
+g.addEdge("C", "E")
+g.addEdge("D", "E")
+g.addEdge("D", "F")
+g.addEdge("E", "F")
 
 console.log(g)
+g.recursiveDFS("A")
+
+/*
+            A
+          /  \
+         B    C
+         |    |
+         D ---E
+         \    /
+            F
+    
+*/

@@ -12,8 +12,8 @@
 - Location / Mapping
 - File System Optimizations
 - Recommendations
-
----
+- gps
+- ***
 
 ## Terminology
 
@@ -73,3 +73,30 @@
 | + Can take up less space                | - Take up more space             |
 | + Fater to visit all edges              | -Slower to visit all edges       |
 | - Can be slower to lookup specific edge | + Faster to lookup specific edge |
+
+# Traversal
+
+- There is no root in graphs, we need to specify
+- will have to visit vtx twice
+
+# Depth First Traversal
+
+- What does depth mean on a spiderweb?
+- keep track of the nodes already visited
+
+## Recursive PsuedoCode
+
+```
+recursiveDFT(vtx){
+    if(vtx is empty){
+        return // base case
+    }
+    add vtx to results list
+    mark vtx as visited
+    for each neighbor in vtxs neighbors{
+            if (neighbor is not visited){
+                recursively call DFS on neighbor
+            }
+    }
+}
+```
