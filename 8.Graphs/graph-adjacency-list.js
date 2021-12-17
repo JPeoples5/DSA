@@ -72,14 +72,36 @@ class Graph {
 			currentVtx = stack.pop() // 'A'
 			results.push(currentVtx) // results = ['A']
 
-			this.adjacencyList[currentVtx].forEach((connection) => {
-				if (!visited[connection]) {
-					visited[connection] = true
-					stack.push(connection)
+			this.adjacencyList[currentVtx].forEach((neighbor) => {
+				if (!visited[neighbor]) {
+					visited[neighbor] = true
+					stack.push(neighbor)
 				}
 			})
 		}
 		console.log(results)
+		return results
+	}
+	BFS(start) {
+		const queue = [start]
+		const visited = {}
+		const results = []
+
+		visited[start] = true
+		let currentVtx
+		while (queue.length) {
+			currentVtx = queue.shift()
+			results.push(currentVtx)
+
+			this.adjacencyList[currentVtx].forEach((neighbor) => {
+				if (!visited[neighbor]) {
+					visited[neighbor] = true
+					//if unshifted() this becomes DFS
+					queue.push(neighbor)
+				}
+			})
+		}
+
 		return results
 	}
 }
@@ -103,7 +125,6 @@ g.addEdge("E", "F")
 
 // console.log(g)
 // g.recursiveDFS("A")
-g.iteratvieDFS("A")
 
 /*
             A
