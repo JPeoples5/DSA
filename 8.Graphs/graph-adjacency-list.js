@@ -42,19 +42,44 @@ class Graph {
 
 		//helper func
 		function dfs(vtx) {
-			if (!vtx) return null
+			if (!vtx) return undefined
 
 			// obj for O(1) lookup
 			visited[vtx] = true
 			results.push(vtx)
 
-			//loop over aL's key's values
-			for (let valueItem in adjacencyList) {
-				console.log(valueItem)
-				if (!visited[valueItem]) return dfs(valueItem)
+			//loop over adjList's key's values
+			for (let key in adjacencyList) {
+				if (!visited[key]) return dfs(key)
 			}
 		}
 		dfs(start)
+		return results
+	}
+
+	iteratvieDFS(start) {
+		const stack = [start] // ex: ['A']
+		const visited = {}
+		const results = []
+		let currentVtx
+
+		visited[start] = true // {'A' : true}
+
+		console.log("adjList", this.adjacencyList)
+		while (stack.length) {
+			console.log("stack", stack)
+
+			currentVtx = stack.pop() // 'A'
+			results.push(currentVtx) // results = ['A']
+
+			this.adjacencyList[currentVtx].forEach((connection) => {
+				if (!visited[connection]) {
+					visited[connection] = true
+					stack.push(connection)
+				}
+			})
+		}
+		console.log(results)
 		return results
 	}
 }
@@ -76,8 +101,9 @@ g.addEdge("D", "E")
 g.addEdge("D", "F")
 g.addEdge("E", "F")
 
-console.log(g)
-g.recursiveDFS("A")
+// console.log(g)
+// g.recursiveDFS("A")
+g.iteratvieDFS("A")
 
 /*
             A
@@ -89,3 +115,14 @@ g.recursiveDFS("A")
             F
     
 */
+
+// Graph {
+// 	adjacencyList: {
+// 	  A: [ 'B', 'C' ],
+// 	  B: [ 'A', 'D' ],
+// 	  C: [ 'A', 'E' ],
+// 	  D: [ 'B', 'E', 'F' ],
+// 	  E: [ 'C', 'D', 'F' ],
+// 	  F: [ 'D', 'E' ]
+// 		}
+//   }

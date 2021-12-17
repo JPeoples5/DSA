@@ -20,6 +20,7 @@
 - Vertex: a node
 - Edge: connection bewtween nodes
 - Weighted Graph: Adding value to the edges
+- Cycle: a edge leaving and coming back to the same vtx
 - Undirected Graph: no directions associated with an edge
 - Directed Graph: direction matters,direction assigned to edges, sometimes modeled with arrows
 
@@ -28,11 +29,12 @@
 - |V|: number of vertices
 - |E |: number of edges
 
-## Adjacency Matrix
+## Adjacency Matrix (1 and 0 like the matrix)
 
 - a 2d array of rows and columns.
 - each vertex is listed on the x and the y headers
 - the intersection of the vertexs will hold a 0 or a 1 to show if they have a connection/edge
+- A sparse AM is one with many 0, taking up unneeded space
 
 ```
 | - | A | B | C |
