@@ -123,9 +123,6 @@ g.addEdge("D", "E")
 g.addEdge("D", "F")
 g.addEdge("E", "F")
 
-// console.log(g)
-// g.recursiveDFS("A")
-
 /*
             A
           /  \

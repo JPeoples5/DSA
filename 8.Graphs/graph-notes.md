@@ -46,7 +46,6 @@
 
 ## Adjacency List
 
--
 - use a arr to store the edges
 - this uses the position of the nodes
 - use a hash table/ map
@@ -89,7 +88,7 @@
 ## Recursive PsuedoCode
 
 ```
-recursiveDFT(vtx){
+recursiveDFS(vtx){
     if(vtx is empty){
         return // base case
     }
@@ -101,4 +100,46 @@ recursiveDFT(vtx){
             }
     }
 }
+```
+
+## Iterative DFS
+
+```
+  dfs(start){
+      create a stack, arr
+      create a visisted Data Structure
+      create a results arr
+
+      mark start as visited
+
+      while stack has length:
+        pop / store currentVtx from stack
+        and push the currentVtx into results
+
+        on adjLists key of currentVtx... for reach neighbor or connection
+            if the neighbor hasnt been visited
+                mark it as visited
+                push the neighbor onto the stack
+
+    return the results
+  }
+
+```
+
+## Iterative BFS
+
+```
+  BFS(start){
+      create a queue
+      create a visited
+
+      make the starting vertex visited
+      loop as long as there is something in the queue
+        remove the first vtx from the queue --> push into visited
+        loop over each vtx in adjList for the currentVtx
+        if !visited[currentVtx]
+            mark as visited and enqueu
+        return results
+  }
+
 ```
